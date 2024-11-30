@@ -12,6 +12,7 @@ import textCon from "../assets/text_conv..png";
 import portfolio from "../assets/Portfolio.jpg";
 import ScrollToTopButton from '../Components/scrollToTop';
 
+
 const Home = () => {
   const projectData = [
     {
@@ -19,7 +20,7 @@ const Home = () => {
       description: 'Developed a fully responsive, interactive portfolio website using Vite for rapid development and optimized build performance, combined with React for dynamic, component-based UI. The project leverages Bootstrap for a clean, mobile-first design and responsive layouts. The website showcases my skills, projects, and experience with smooth navigation, engaging animations, and a modern aesthetic.',
       imageUrl: portfolio,
       liveUrl: 'https://example.com/project1',
-      codeUrl: 'https://github.com/your-username/project1'
+      codeUrl: 'https://github.com/viovikash123/Portfolio.git'
     },
     {
       title: 'Project Two',
@@ -93,17 +94,17 @@ const Home = () => {
 
   return (
     <>
-    <section className="hero-section" id="hero-section" style={{ padding: '100px' }}>
-      <div className='container'>
-        <div className='row'>
-          <div className='col-12 col-md-8'>
-            <div className='name' style={{ fontSize: '36px', fontFamily: 'Roboto', color: 'whitesmoke', fontWeight: '600' }}>
+    <section className="hero-section" id="hero-section" >
+      <div className='container '>
+        <div className='row d-flex align-items-center my-5'>
+          <div className='col-12 py-5   col-md-8 order-2 order-md-1'>
+            <div className='name' style={{ fontSize: '48px', fontFamily: 'Roboto', color: 'whitesmoke', fontWeight: '600' }}> Hi, I am <br/>
               Vikash Singh
             </div>
-            <div className='proff' style={{ fontSize: '30px', color: 'white' }}>
+            <div className='proff' style={{ fontSize: '40px', color: 'white' }}>
               I'm a <span style={{ color: 'greenyellow' }}>Web Developer</span>
             </div>
-            <p style={{ color: 'lightgray', fontSize: '16px', lineHeight: '1.5' }}>
+            <p style={{ color: 'lightgray', fontSize: '20px', lineHeight: '1.5' }}>
               A passionate and detail-oriented web developer with 8 months of hands-on experience in front-end and back-end development. Skilled in building dynamic, responsive websites and applications using HTML, CSS, JavaScript, React.js, and Bootstrap. Proficient in database management with SQL, including crafting optimized queries and integrating them into web applications. Eager to apply my expertise in React.js for building interactive user interfaces and leveraging Bootstrap for mobile-first, responsive designs. Looking to grow professionally and contribute to impactful web development projects with a focus on creating seamless user experiences.
             </p>
             <a href="/path-to-your-cv.pdf" download>
@@ -133,7 +134,7 @@ const Home = () => {
             </a>
             
           </div>
-          <div className='col-12 col-md-4 d-flex justify-content-center align-items-center'>
+          <div className='col-12 col-md-4 py-5 d-flex justify-content-center align-items-center order-1 order-md-2'>
             <div className='photo'>
               <div className="circle-border"></div>
               <img src={vPic} alt="vPic" className='circle-image' style={{
@@ -420,15 +421,10 @@ const Home = () => {
 
       {formStatus && <p className="form-status">{formStatus}</p>}
 
-      <div className="contact-details">
-        <h2 className='text-white'>Get In Touch</h2>
-        <p>Email: <a href="mailto:viovikash@gmail.com">viovikash@gmail.com</a></p>
-        <p>Phone: +91 9044102428</p>
-      </div>
-      <div className="footer-bottom">
-          <p>&copy; 2024 Vikash Singh. All Rights Reserved.</p>
-        </div>
+      
+      
         <ScrollToTopButton />
+        
     </section>
     
     </>

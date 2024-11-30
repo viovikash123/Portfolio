@@ -11,6 +11,13 @@ p{
   gap: 10px;
 }
 
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 11;
+}
+
 .nav-link{
   color: #fff;
   font-family: roboto;
@@ -136,8 +143,8 @@ section {
   background: linear-gradient(45deg, #333, #666, #333, #666); 
   background-size: 400% 400%; 
   animation: moveGradient 8s ease-in-out infinite;
-  height: 650px;
-  max-height:1900px;
+  height: 100%;
+ 
 }
 
 @media (max-width: 767px) {
@@ -146,11 +153,7 @@ section {
   }
 }
 
-@media (max-width: 480px) {
-  .hero-section{
-    height:1900px;
-  }
-}
+
 
 
 
@@ -161,6 +164,7 @@ section {
   height: auto;
   position: relative;
   z-index: 0;
+  height: 100%;
 }
 
 @keyframes moveGradient {

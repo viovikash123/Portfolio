@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 const Navbar = () => {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div className="container-fluid d-flex">
           <a className="navbar-brand text-white" style={{ fontFamily: 'roboto', fontSize: '26px', fontWeight: '600', paddingLeft: '100px' }} href="#">
             Portfolio.

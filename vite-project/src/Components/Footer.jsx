@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
 import '../footer.css';
 
@@ -10,11 +10,11 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="footer-nav">
           <ul>
-            <li><Link to="/" className="footer-link">Home</Link></li>
-            <li><Link to="/about" className="footer-link">About</Link></li>
-            <li><Link to="#" className="footer-link">Portfolio</Link></li>
-            <li><Link to="#" className="footer-link">Services</Link></li>
-            <li><Link to="/contact" className="footer-link">Contact</Link></li>
+            <li><Link to="hero-section" className="footer-link">Home</Link></li>
+            <li><Link to="skill-section" className="footer-link">Skills</Link></li>
+            <li><Link to="projects-section" className="footer-link">Projects</Link></li>
+            <li><Link to="contact-section" className="footer-link">Contact</Link></li>
+            
           </ul>
         </div>
 
