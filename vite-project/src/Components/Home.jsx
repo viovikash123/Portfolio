@@ -8,9 +8,11 @@ import { FaShareSquare } from 'react-icons/fa';
 import { FaMicrosoft } from 'react-icons/fa';
 import toDo from "../assets/To-do.jpeg";
 import ticTac from "../assets/Tic_tac_toe.png";
+import real from "../assets/Realsoft.png";
 import textCon from "../assets/text_conv..png";
 import portfolio from "../assets/Portfolio.jpg";
-import ScrollToTopButton from '../Components/scrollToTop';
+import About from './About';
+import Contact from './Contact';
 
 
 const Home = () => {
@@ -23,24 +25,24 @@ const Home = () => {
       codeUrl: 'https://github.com/viovikash123/Portfolio.git'
     },
     {
-      title: 'Project Two',
-      description: 'A portfolio website built with React.js. It is fully responsive and includes sections like About Me, Projects, and Contact.',
-      imageUrl: 'https://via.placeholder.com/300x200?text=Project+Two',
-      liveUrl: 'https://example.com/project2',
+      title: 'RealSoftech',
+      description: 'Developed a dynamic website for Realsoft Technologies using MERN stack and Next.js. Built a responsive, user-friendly front-end with React.js and Next.js for optimal performance and SEO. Integrated Node.js and Express.js for backend API development and connected to a MondoDB database. Focused on creating an intuitive user experience, improving site performance, and ensuring cross-device accessibility. The project successfully enhanced Realsoft Online presence and showcased their IT consulting services to potential clients.',
+      imageUrl: real,
+      liveUrl: 'https://realsoftech-main.vercel.app/',
       codeUrl: 'https://github.com/your-username/project2'
     },
     {
       title: 'To-Do-List',
       description: 'Developed a dynamic to-do-list web application using HTML,CSS, and JavaScript, featuring task management with add/edit/delete functionality and localStorage for persistence, ensuring responsive design and a user-friendly interface.The application also implements a responsive design to ensure a smooth user experience across a variety of devices, including desktops, tablets, and smartphones.',
       imageUrl: toDo,
-      liveUrl: 'https://example.com/project3',
+      liveUrl: 'https://to-do-list-gamma-sage.vercel.app/',
       codeUrl: 'https://github.com/your-username/project3'
     },
     {
       title: 'Tic-Tac-Toe',
       description: 'Developed an interactive Tic Tac Toe game entirely using HTML, CSS, and JavaScript, designed for two players to engage in a classic game on a responsive web interface. The game features a dynamic grid layout and allows users to alternate turns, track the game progress, and declare a winner or a tie.Tic Tac Toe game offers a polished and enjoyable experience for two players.  ',
       imageUrl: ticTac,
-      liveUrl: 'https://example.com/project4',
+      liveUrl: 'https://tic-tac-toe-jsp.vercel.app/',
       codeUrl: 'https://github.com/your-username/project4'
     },
     {
@@ -58,40 +60,7 @@ const Home = () => {
       codeUrl: 'https://github.com/your-username/project6'
     }
   ];
-  /****Contact***/
   
-    const [formData, setFormData] = useState({
-      name: '',
-      email: '',
-      message: ''
-    });
-  
-    const [formStatus, setFormStatus] = useState('');
-  
-    // Handle form field changes
-    const handleInputChange = (e) => {
-      const { name, value } = e.target;
-      setFormData({
-        ...formData,
-        [name]: value
-      });
-    };
-  
-    // Handle form submission
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      
-      // You can integrate an email API or backend here for form submission.
-      // For now, we simulate a successful submission.
-      
-      if (formData.name && formData.email && formData.message) {
-        setFormStatus('Thank you for your message! I will get back to you soon.');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setFormStatus('Please fill out all fields.');
-      }
-    };
-
   return (
     <>
     <section className="hero-section" id="hero-section" >
@@ -107,7 +76,7 @@ const Home = () => {
             <p style={{ color: 'lightgray', fontSize: '20px', lineHeight: '1.5' }}>
               A passionate and detail-oriented web developer with 8 months of hands-on experience in front-end and back-end development. Skilled in building dynamic, responsive websites and applications using HTML, CSS, JavaScript, React.js, and Bootstrap. Proficient in database management with SQL, including crafting optimized queries and integrating them into web applications. Eager to apply my expertise in React.js for building interactive user interfaces and leveraging Bootstrap for mobile-first, responsive designs. Looking to grow professionally and contribute to impactful web development projects with a focus on creating seamless user experiences.
             </p>
-            <a href="/path-to-your-cv.pdf" download>
+            <a href="download/vikash_resume.pdf" download="vikash_resume.pdf">
               <button style={{
                 backgroundColor: 'greenyellow',
                 border: 'none',
@@ -119,10 +88,10 @@ const Home = () => {
                 cursor: 'pointer',
                 marginTop: '20px',
               }}>Download CV</button>
-               <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
+               <a href="https://github.com/viovikash123" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
             <FaGithub />
           </a>
-          <a href="https://www.linkedin.com/in/your-username/" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
+          <a href="https://www.linkedin.com/in/viovikash123/" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
             <FaLinkedin />
           </a>
           <a href="https://www.facebook.com/your-username" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
@@ -377,53 +346,12 @@ const Home = () => {
         </div>
       </div>
     </section>
+    <section className='about-container' id='about-section' style={{backgroundColor:"grey"}}>
+      <About/>
+    </section>
     <section className="contact-container" id='contact-section' style={{backgroundColor:"black"}}>
-    
-      <h1>Contact Me</h1>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <label htmlFor="name">Full Name</label>
-          <input 
-            type="text" 
-            id="name" 
-            name="name" 
-            value={formData.name}
-            onChange={handleInputChange}
-            required 
-          />
-        </div>
-        
-        <div className="form-group">
-          <label htmlFor="email">Email Address</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            value={formData.email}
-            onChange={handleInputChange}
-            required 
-          />
-        </div>
-        
-        <div className="form-group">
-          <label htmlFor="message">Your Message</label>
-          <textarea 
-            id="message" 
-            name="message" 
-            value={formData.message}
-            onChange={handleInputChange}
-            required 
-          ></textarea>
-        </div>
-
-        <button type="submit" className="submit-button">Send Message</button>
-      </form>
-
-      {formStatus && <p className="form-status">{formStatus}</p>}
-
-      
-      
-        <ScrollToTopButton />
+    <Contact/>
+     
         
     </section>
     
@@ -456,6 +384,7 @@ const subHeaderStyles = {
 
 const cardStyles = {
   width: '100%',
+  height: '550px',
   borderRadius: '15px',
   overflow: 'hidden',
   position: 'relative',

@@ -13,6 +13,7 @@ const Footer = () => {
             <li><Link to="hero-section" className="footer-link">Home</Link></li>
             <li><Link to="skill-section" className="footer-link">Skills</Link></li>
             <li><Link to="projects-section" className="footer-link">Projects</Link></li>
+            <li><Link to="about-section" className="footer-link">About Me</Link></li>
             <li><Link to="contact-section" className="footer-link">Contact</Link></li>
             
           </ul>
