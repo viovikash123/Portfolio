@@ -76,7 +76,7 @@ const Home = () => {
             <p style={{ color: 'lightgray', fontSize: '20px', lineHeight: '1.5' }}>
               A passionate and detail-oriented web developer with 8 months of hands-on experience in front-end and back-end development. Skilled in building dynamic, responsive websites and applications using HTML, CSS, JavaScript, React.js, and Bootstrap. Proficient in database management with SQL, including crafting optimized queries and integrating them into web applications. Eager to apply my expertise in React.js for building interactive user interfaces and leveraging Bootstrap for mobile-first, responsive designs. Looking to grow professionally and contribute to impactful web development projects with a focus on creating seamless user experiences.
             </p>
-            <a href="download/vikash_resume.pdf" download="vikash_resume.pdf">
+            <a href="/vikash_resume.pdf" download="vikash_resume.pdf">
               <button style={{
                 backgroundColor: 'greenyellow',
                 border: 'none',
