@@ -27,10 +27,10 @@ const Footer = () => {
 
         {/* Social Media Icons */}
         <div className="social-links">
-          <a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://github.com/viovikash123" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaGithub />
           </a>
-          <a href="https://www.linkedin.com/in/your-username/" target="_blank" rel="noopener noreferrer" className="social-icon">
+          <a href="https://www.linkedin.com/in/viovikash123/" target="_blank" rel="noopener noreferrer" className="social-icon">
             <FaLinkedin />
           </a>
           <a href="https://www.facebook.com/your-username" target="_blank" rel="noopener noreferrer" className="social-icon">

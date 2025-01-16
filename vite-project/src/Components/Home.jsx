@@ -384,7 +384,7 @@ const subHeaderStyles = {
 
 const cardStyles = {
   width: '100%',
-  height: '550px',
+  height: '580px',
   borderRadius: '15px',
   overflow: 'hidden',
   position: 'relative',

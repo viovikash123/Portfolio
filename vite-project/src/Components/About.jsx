@@ -37,7 +37,7 @@ const About = () => {
     },
 
     {
-        title: "Web Developed Intern",
+        title: "Web Developer Intern",
         company: "Akshaya Patra Foundation",
         duration: "Jan 2022 - May 2022",
         description: "Developed a dynamic portal website for the Akshaya Patra Foundation using HTML,CSS,JAVASCRIPT ,Bootstrap, The project featured a user-friendly interface with responsive design, interactive donation form, and real-time form validation",
