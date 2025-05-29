@@ -100,7 +100,7 @@ const Contact = () => {
   };
 
   return (
-    <div style={formStyles}>
+    <div data-aos="zoom-in" data-aos-duration="1500" style={formStyles}>
       <h2 style={headingStyles}>Contact Us</h2>
       <form onSubmit={sendEmail}>
         <div>

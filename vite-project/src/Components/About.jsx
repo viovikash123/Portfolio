@@ -26,7 +26,7 @@ const About = () => {
     {
       title: "Junior Web Developer",
       company: "WiseTrack Technologies, Noida",
-      duration: "Sep 2024 - Nov 2024",
+      duration: "Sep 2024 - Jan 2025",
       description: "Developed a dynamic Web Application for Realsoft Technologies using MERN Stack and NEXT.JS",
     },
     {
@@ -105,7 +105,7 @@ const About = () => {
       <h2 style={headingStyle}>Education & Experience</h2>
       <div style={containerStyle}>
         {/* Education Section */}
-        <div style={boxStyle}>
+        <div data-aos="zoom-in" data-aos-duration="1500" style={boxStyle}>
           <h3 style={titleStyle}>Education</h3>
           {educationData.map((edu, index) => (
             <div key={index}>
@@ -117,7 +117,7 @@ const About = () => {
         </div>
 
         {/* Experience Section */}
-        <div style={boxStyle}>
+        <div data-aos="zoom-in" data-aos-duration="1500" style={boxStyle}>
           <h3 style={titleStyle}>Experience</h3>
           {experienceData.map((exp, index) => (
             <div key={index}>

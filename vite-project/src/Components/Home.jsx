@@ -13,6 +13,10 @@ import textCon from "../assets/text_conv..png";
 import portfolio from "../assets/Portfolio.jpg";
 import About from './About';
 import Contact from './Contact';
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+
+AOS.init();
 
 
 const Home = () => {
@@ -67,17 +71,17 @@ const Home = () => {
       <div className='container '>
         <div className='row d-flex align-items-center my-5'>
           <div className='col-12 py-5   col-md-8 order-2 order-md-1'>
-            <div className='name' style={{ fontSize: '48px', fontFamily: 'Roboto', color: 'whitesmoke', fontWeight: '600' }}> Hi, I am <br/>
+            <div className='name' data-aos="fade-up" data-aos-duration="1000" style={{ fontSize: '48px', fontFamily: 'Roboto', color: 'whitesmoke', fontWeight: '600' }}> Hi, I am <br/>
               Vikash Singh
             </div>
-            <div className='proff' style={{ fontSize: '40px', color: 'white' }}>
+            <div className='proff' data-aos="fade-up" data-aos-duration="2000" style={{ fontSize: '40px', color: 'white' }}>
               I'm a <span style={{ color: 'greenyellow' }}>Web Developer</span>
             </div>
-            <p style={{ color: 'lightgray', fontSize: '20px', lineHeight: '1.5' }}>
-              A passionate and detail-oriented web developer with 8 months of hands-on experience in front-end and back-end development. Skilled in building dynamic, responsive websites and applications using HTML, CSS, JavaScript, React.js, and Bootstrap. Proficient in database management with SQL, including crafting optimized queries and integrating them into web applications. Eager to apply my expertise in React.js for building interactive user interfaces and leveraging Bootstrap for mobile-first, responsive designs. Looking to grow professionally and contribute to impactful web development projects with a focus on creating seamless user experiences.
+            <p data-aos="fade-up" data-aos-duration="2500" style={{ color: 'lightgray', fontSize: '20px', lineHeight: '1.5' }}>
+              A passionate and detail-oriented web developer with 10 months of hands-on experience in front-end and back-end development. Skilled in building dynamic, responsive websites and applications using HTML, CSS, JavaScript, React.js, and Bootstrap. Proficient in database management with SQL, including crafting optimized queries and integrating them into web applications. Eager to apply my expertise in React.js for building interactive user interfaces and leveraging Bootstrap for mobile-first, responsive designs. Looking to grow professionally and contribute to impactful web development projects with a focus on creating seamless user experiences.
             </p>
             <a href="/vikash_resume.pdf" download="vikash_resume.pdf">
-              <button style={{
+              <button data-aos="fade-up" data-aos-duration="2500" style={{
                 backgroundColor: 'greenyellow',
                 border: 'none',
                 color: 'black',
@@ -88,17 +92,17 @@ const Home = () => {
                 cursor: 'pointer',
                 marginTop: '20px',
               }}>Download CV</button>
-               <a href="https://github.com/viovikash123" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
-            <FaGithub />
+               <a  href="https://github.com/viovikash123" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
+            <FaGithub  data-aos="fade-up" data-aos-duration="2500" />
           </a>
           <a href="https://www.linkedin.com/in/viovikash123/" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
-            <FaLinkedin />
+            <FaLinkedin data-aos="fade-up" data-aos-duration="2500" />
           </a>
           <a href="https://www.facebook.com/your-username" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
-            <FaFacebook />
+            <FaFacebook data-aos="fade-up" data-aos-duration="2500" />
           </a>
           <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
-            <FaTwitter />
+            <FaTwitter  data-aos="fade-up" data-aos-duration="2500"/>
           </a>
             </a>
             
@@ -106,7 +110,7 @@ const Home = () => {
           <div className='col-12 col-md-4 py-5 d-flex justify-content-center align-items-center order-1 order-md-2'>
             <div className='photo'>
               <div className="circle-border"></div>
-              <img src={vPic} alt="vPic" className='circle-image' style={{
+              <img data-aos="zoom-in" data-aos-duration="1500" src={vPic} alt="vPic" className='circle-image' style={{
                 width: '275px', height: 'auto', borderRadius: '50%',
                 objectFit: 'cover', boxShadow: '0 0 20px 8px rgba(173, 255, 47, 0.8)'
               }} />
@@ -129,7 +133,7 @@ const Home = () => {
 
         <div className="row">
           {/* Front-End Skills */}
-          <div className="col-12 col-md-6 mb-4">
+          <div data-aos="fade-up" data-aos-duration="2500" className="col-12 col-md-6 mb-4">
             <h3 style={{ fontSize: '28px', fontWeight: '600', color: '#333' }}>Front-End Development</h3>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
@@ -200,7 +204,7 @@ const Home = () => {
           </div>
 
           {/* Back-End Skills */}
-          <div className="col-12 col-md-6 mb-4">
+          <div data-aos="fade-up" data-aos-duration="2500" className="col-12 col-md-6 mb-4">
             <h3 style={{ fontSize: '28px', fontWeight: '600', color: '#333' }}>Back-End Development</h3>
             <div>
               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '15px' }}>
@@ -241,32 +245,32 @@ const Home = () => {
             <h3 style={{ fontSize: '28px', fontWeight: '600', color: '#333' }}>Tools & Other Skills</h3>
             <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
               <div style={{ margin: '20px' }}>
-                <DiGit size={60} color="#F1502F" />
+                <DiGit data-aos="slide-right" data-aos-duration="2500" size={60} color="#F1502F" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>Git</p>
               </div>
               <div style={{ margin: '20px' }}>
-                <FaReact size={60} color="#61DBFB" />
+                <FaReact data-aos="slide-right" data-aos-duration="2500" size={60} color="#61DBFB" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>React Native</p>
               </div>
               
               
               {/* Added Tools */}
               <div style={{ margin: '20px' }}>
-                <FaShareSquare size={60} color="#F2C200" />
+                <FaShareSquare  data-aos="slide-right" data-aos-duration="2500" size={60} color="#F2C200" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>SharePoint</p>
               </div>
              
               
               <div style={{ margin: '20px' }}>
-                <FaMicrosoft size={60} color="#0078d4" />
+                <FaMicrosoft data-aos="slide-right" data-aos-duration="2500" size={60} color="#0078d4" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>Microsoft Power Apps</p>
               </div>
               <div style={{ margin: '20px' }}>
-                <FaMicrosoft size={60} color="0078d4" />
+                <FaMicrosoft  data-aos="slide-right" data-aos-duration="2500" size={60} color="0078d4" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>Microsoft Power Automate</p>
               </div>
               <div style={{ margin: '20px' }}>
-                <FaMicrosoft size={60} color="0078d4" />
+                <FaMicrosoft data-aos="slide-right" data-aos-duration="2500"  size={60} color="0078d4" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>MS Office</p>
               </div>
             </div>
@@ -288,7 +292,7 @@ const Home = () => {
         {/* Project Cards Grid */}
         <div className="row">
           {projectData.map((project, index) => (
-            <div className="col-12 col-md-4 mb-4" key={index}>
+            <div data-aos="zoom-in" data-aos-duration="1500"className="col-12 col-md-4 mb-4" key={index}>
               <div className="card shadow-lg" style={cardStyles}>
                 {/* Project Badge */}
                 {!project.liveUrl && (
@@ -347,7 +351,7 @@ const Home = () => {
       </div>
     </section>
     <section className='about-container' id='about-section' style={{backgroundColor:"grey"}}>
-      <About/>
+      <About />
     </section>
     <section className="contact-container" id='contact-section' style={{backgroundColor:"black"}}>
     <Contact/>
