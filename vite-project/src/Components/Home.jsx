@@ -245,32 +245,32 @@ const Home = () => {
             <h3 style={{ fontSize: '28px', fontWeight: '600', color: '#333' }}>Tools & Other Skills</h3>
             <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
               <div style={{ margin: '20px' }}>
-                <DiGit data-aos="slide-right" data-aos-duration="2500" size={60} color="#F1502F" />
+                <DiGit data-aos="fade-up" data-aos-duration="2500" size={60} color="#F1502F" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>Git</p>
               </div>
               <div style={{ margin: '20px' }}>
-                <FaReact data-aos="slide-right" data-aos-duration="2500" size={60} color="#61DBFB" />
+                <FaReact data-aos="fade-up" data-aos-duration="2500" size={60} color="#61DBFB" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>React Native</p>
               </div>
               
               
               {/* Added Tools */}
               <div style={{ margin: '20px' }}>
-                <FaShareSquare  data-aos="slide-right" data-aos-duration="2500" size={60} color="#F2C200" />
+                <FaShareSquare  data-aos="fade-up" data-aos-duration="2500" size={60} color="#F2C200" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>SharePoint</p>
               </div>
              
               
               <div style={{ margin: '20px' }}>
-                <FaMicrosoft data-aos="slide-right" data-aos-duration="2500" size={60} color="#0078d4" />
+                <FaMicrosoft data-aos="fade-up" data-aos-duration="2500" size={60} color="#0078d4" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>Microsoft Power Apps</p>
               </div>
               <div style={{ margin: '20px' }}>
-                <FaMicrosoft  data-aos="slide-right" data-aos-duration="2500" size={60} color="0078d4" />
+                <FaMicrosoft  data-aos="fade-up" data-aos-duration="2500" size={60} color="0078d4" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>Microsoft Power Automate</p>
               </div>
               <div style={{ margin: '20px' }}>
-                <FaMicrosoft data-aos="slide-right" data-aos-duration="2500"  size={60} color="0078d4" />
+                <FaMicrosoft data-aos="fade-up" data-aos-duration="2500"  size={60} color="0078d4" />
                 <p style={{ fontSize: '16px', color: '#dee2e6' }}>MS Office</p>
               </div>
             </div>
@@ -292,7 +292,7 @@ const Home = () => {
         {/* Project Cards Grid */}
         <div className="row">
           {projectData.map((project, index) => (
-            <div data-aos="zoom-in" data-aos-duration="1500"className="col-12 col-md-4 mb-4" key={index}>
+            <div data-aos="fade-up" data-aos-duration="1500"className="col-12 col-md-4 mb-4" key={index}>
               <div className="card shadow-lg" style={cardStyles}>
                 {/* Project Badge */}
                 {!project.liveUrl && (
