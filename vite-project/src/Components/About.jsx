@@ -30,16 +30,16 @@ const About = () => {
       description: "Developed a dynamic Web Application for Realsoft Technologies using MERN Stack and NEXT.JS",
     },
     {
-      title: "IT Intern",
+      title: "Web Devloper (Intern)",
       company: "Century Enka Limited (Aditya Birla), Pune",
-      duration: "Feb 2023 - June 2023",
+      duration: "July 2023 - Dec 2023",
       description: "Developed a custom Microsoft Power app integrated with Power Automate and Sharepoint & Developed a websites in React js for Requisition for New Requirement",
     },
 
     {
         title: "Web Developer Intern",
         company: "Akshaya Patra Foundation",
-        duration: "Jan 2022 - May 2022",
+        duration: "15th Feb 2023 - 15th June 2023",
         description: "Developed a dynamic portal website for the Akshaya Patra Foundation using HTML,CSS,JAVASCRIPT ,Bootstrap, The project featured a user-friendly interface with responsive design, interactive donation form, and real-time form validation",
       },
   ];
