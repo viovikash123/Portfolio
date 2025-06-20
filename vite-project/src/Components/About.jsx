@@ -30,7 +30,7 @@ const About = () => {
       description: "Developed a dynamic Web Application for Realsoft Technologies using MERN Stack and NEXT.JS",
     },
     {
-      title: "Web Devloper (Intern)",
+      title: "Software Developer (Intern)",
       company: "Century Enka Limited (Aditya Birla), Pune",
       duration: "July 2023 - Dec 2023",
       description: "Developed a custom Microsoft Power app integrated with Power Automate and Sharepoint & Developed a websites in React js for Requisition for New Requirement",
