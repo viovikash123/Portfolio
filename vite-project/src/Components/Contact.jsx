@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
-  // State for form fields
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,142 +10,153 @@ const Contact = () => {
 
   const [status, setStatus] = useState('');
 
-  // Handle form input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Send email function using EmailJS
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Replace 'service_id', 'template_id', and 'user_id' with your actual credentials from EmailJS
     emailjs
       .sendForm(
-        'service_7vozctv',  // Service ID from EmailJS
-        'template_ee3uigc',  // Template ID from EmailJS
-        e.target,             // Form data
-        'Z2oq-GIpYsKgyCsD7'       // User ID from EmailJS
+        'service_7vozctv', // Replace with your service ID
+        'template_ee3uigc', // Replace with your template ID
+        e.target,
+        'Z2oq-GIpYsKgyCsD7' // Replace with your public key
       )
       .then(
         (result) => {
           setStatus('Message sent successfully!');
-          setFormData({ name: '', email: '', message: '' }); // Clear form
+          setFormData({ name: '', email: '', message: '' });
         },
         (error) => {
-          setStatus('Error sending message, please try again later.');
+          setStatus('Error sending message. Please try again later.');
         }
       );
   };
 
-  // Inline CSS styles
-  const formStyles = {
-    width: '100%',
-    maxWidth: '600px',
-    margin: '0 auto',
-    padding: '20px',
-    backgroundColor: '#f4f4f4',
-    borderRadius: '8px',
-  };
-
-  const headingStyles = {
-    textAlign: 'center',
-    fontWeight: '600',
-  };
-
-  const inputStyles = {
-    width: '100%',
-    padding: '10px',
-    fontSize: '1rem',
-    border: '1px solid #ccc',
-    borderRadius: '4px',
-    marginBottom: '15px',
-  };
-
-  const textareaStyles = {
-    width: '100%',
-    padding: '10px',
-    fontSize: '1rem',
-    border: '1px solid #ccc',
-    borderRadius: '4px',
-    marginBottom: '15px',
-    height: '120px',
-  };
-
-  const buttonStyles = {
-    padding: '10px',
-    backgroundColor: '#007bff',
-    color: 'white',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    width: '100%',
-    fontSize: '1rem',
-  };
-
-  const buttonHoverStyles = {
-    backgroundColor: '#0056b3',
-  };
-
-  const statusStyles = {
-    textAlign: 'center',
-    fontSize: '1.1rem',
-    fontWeight: 'bold',
-    marginTop: '20px',
+  // Styles
+  const styles = {
+    formWrapper: {
+      width: '100%',
+      maxWidth: '600px',
+      margin: '50px auto',
+      padding: '30px',
+      backgroundColor: '#f4f4f4',
+      borderRadius: '10px',
+      boxShadow: '0 4px 15px rgba(0, 0, 0, 0.1)',
+    },
+    heading: {
+      textAlign: 'center',
+      fontWeight: '600',
+      marginBottom: '20px',
+      fontSize: '28px',
+    },
+    label: {
+      display: 'block',
+      marginBottom: '6px',
+      fontWeight: '500',
+    },
+    input: {
+      width: '100%',
+      padding: '10px',
+      fontSize: '1rem',
+      border: '1px solid #ccc',
+      borderRadius: '5px',
+      marginBottom: '20px',
+    },
+    textarea: {
+      width: '100%',
+      padding: '10px',
+      fontSize: '1rem',
+      border: '1px solid #ccc',
+      borderRadius: '5px',
+      marginBottom: '20px',
+      minHeight: '120px',
+      resize: 'vertical',
+    },
+    button: {
+      width: '100%',
+      padding: '12px',
+      fontSize: '1rem',
+      fontWeight: 'bold',
+      backgroundColor: '#007bff',
+      color: '#fff',
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
+      transition: 'background-color 0.3s ease',
+    },
+    status: {
+      marginTop: '20px',
+      textAlign: 'center',
+      fontWeight: 'bold',
+      fontSize: '1rem',
+      color: 'black',
+    },
   };
 
   return (
-    <div data-aos="zoom-in" data-aos-duration="1500" style={formStyles}>
-      <h2 style={headingStyles}>Contact Us</h2>
+    <section
+      className="contact-section"
+      data-aos="zoom-in"
+      data-aos-duration="1500"
+      style={styles.formWrapper}
+    >
+      <h2 style={styles.heading}>Contact Me</h2>
       <form onSubmit={sendEmail}>
         <div>
-          <label style={{ display: 'block', marginBottom: '5px' }}>Name</label>
+          <label htmlFor="name" style={styles.label}>
+            Name
+          </label>
           <input
             type="text"
             name="name"
+            id="name"
             value={formData.name}
             onChange={handleInputChange}
-            style={inputStyles}
+            style={styles.input}
             required
           />
         </div>
+
         <div>
-          <label style={{ display: 'block', marginBottom: '5px' }}>Email</label>
+          <label htmlFor="email" style={styles.label}>
+            Email
+          </label>
           <input
             type="email"
             name="email"
+            id="email"
             value={formData.email}
             onChange={handleInputChange}
-            style={inputStyles}
+            style={styles.input}
             required
           />
         </div>
+
         <div>
-          <label style={{ display: 'block', marginBottom: '5px' }}>Message</label>
+          <label htmlFor="message" style={styles.label}>
+            Message
+          </label>
           <textarea
             name="message"
+            id="message"
             value={formData.message}
             onChange={handleInputChange}
-            style={textareaStyles}
+            style={styles.textarea}
             required
           />
         </div>
-        <button
-          type="submit"
-          style={buttonStyles}
-          onMouseOver={(e) => (e.target.style.backgroundColor = buttonHoverStyles.backgroundColor)}
-          onMouseOut={(e) => (e.target.style.backgroundColor = '#007bff')}
-        >
+
+        <button type="submit" style={styles.button}>
           Send Message
         </button>
       </form>
 
-      {status && <p style={statusStyles}>{status}</p>} {/* Display the status message */}
-    </div>
+      {status && <p style={styles.status}>{status}</p>}
+    </section>
   );
 };
 

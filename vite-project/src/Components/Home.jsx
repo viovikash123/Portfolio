@@ -67,59 +67,101 @@ const Home = () => {
   
   return (
     <>
-    <section className="hero-section" id="hero-section" >
-      <div className='container '>
-        <div className='row d-flex align-items-center my-5'>
-          <div className='col-12 py-5   col-md-8 order-2 order-md-1'>
-            <div className='name' data-aos="fade-up" data-aos-duration="1000" style={{ fontSize: '48px', fontFamily: 'Roboto', color: 'whitesmoke', fontWeight: '600' }}> Hi, I am <br/>
-              Vikash Singh
-            </div>
-            <div className='proff' data-aos="fade-up" data-aos-duration="2000" style={{ fontSize: '40px', color: 'white' }}>
-              I'm a <span style={{ color: 'greenyellow' }}>Web Developer</span>
-            </div>
-            <p data-aos="fade-up" data-aos-duration="2500" style={{ color: 'lightgray', fontSize: '20px', lineHeight: '1.5' }}>
-              A passionate and detail-oriented web developer with 10 months of hands-on experience in front-end and back-end development. Skilled in building dynamic, responsive websites and applications using HTML, CSS, JavaScript, React.js, and Bootstrap. Proficient in database management with SQL, including crafting optimized queries and integrating them into web applications. Eager to apply my expertise in React.js for building interactive user interfaces and leveraging Bootstrap for mobile-first, responsive designs. Looking to grow professionally and contribute to impactful web development projects with a focus on creating seamless user experiences.
-            </p>
-            <a href="/vikash_resume.pdf" download="vikash_resume.pdf">
-              <button data-aos="fade-up" data-aos-duration="2500" style={{
-                backgroundColor: 'greenyellow',
-                border: 'none',
-                color: 'black',
-                padding: '10px 20px',
-                fontSize: '18px',
-                fontWeight: 'bold',
-                borderRadius: '5px',
-                cursor: 'pointer',
-                marginTop: '20px',
-              }}>Download CV</button>
-               <a  href="https://github.com/viovikash123" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
-            <FaGithub  data-aos="fade-up" data-aos-duration="2500" />
-          </a>
-          <a href="https://www.linkedin.com/in/viovikash123/" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
-            <FaLinkedin data-aos="fade-up" data-aos-duration="2500" />
-          </a>
-          <a href="https://www.facebook.com/your-username" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
-            <FaFacebook data-aos="fade-up" data-aos-duration="2500" />
-          </a>
-          <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer" style={{ margin: '0 15px', color: 'greenyellow', fontSize: '24px' }}>
-            <FaTwitter  data-aos="fade-up" data-aos-duration="2500"/>
-          </a>
-            </a>
-            
-          </div>
-          <div className='col-12 col-md-4 py-5 d-flex justify-content-center align-items-center order-1 order-md-2'>
-            <div className='photo'>
-              <div className="circle-border"></div>
-              <img data-aos="zoom-in" data-aos-duration="1500" src={vPic} alt="vPic" className='circle-image' style={{
-                width: '275px', height: 'auto', borderRadius: '50%',
-                objectFit: 'cover', boxShadow: '0 0 20px 8px rgba(173, 255, 47, 0.8)'
-              }} />
-            </div>
-          </div>
+    <section className="hero-section" id="hero-section">
+  <div className="container">
+    <div className="row d-flex align-items-center my-5">
+      
+      {/* Text Section */}
+      <div className="col-12 col-md-8 order-2 order-md-1 py-5">
+        <div data-aos="fade-up" data-aos-duration="1000" className="name" style={{
+          fontSize: '48px',
+          fontFamily: 'Roboto',
+          color: 'whitesmoke',
+          fontWeight: '600'
+        }}>
+          Hi, I am <br />
+          Vikash Singh
         </div>
 
+        <div data-aos="fade-up" data-aos-duration="1500" className="proff" style={{
+          fontSize: '40px',
+          color: 'white'
+        }}>
+          I'm a <span style={{ color: 'greenyellow' }}>Web Developer</span>
+        </div>
+
+        <p data-aos="fade-up" data-aos-duration="2000" style={{
+          color: 'lightgray',
+          fontSize: '20px',
+          lineHeight: '1.5'
+        }}>
+          A passionate and detail-oriented web developer with 10 months of hands-on experience in front-end and back-end development. Skilled in building dynamic, responsive websites and applications using HTML, CSS, JavaScript, React.js, and Bootstrap. Proficient in database management with SQL, including crafting optimized queries and integrating them into web applications. Eager to apply my expertise in React.js for building interactive user interfaces and leveraging Bootstrap for mobile-first, responsive designs. Looking to grow professionally and contribute to impactful web development projects with a focus on creating seamless user experiences.
+        </p>
+
+        {/* Resume + Social Icons */}
+        <div data-aos="fade-up" data-aos-duration="2500" className="d-flex flex-wrap align-items-center mt-3 gap-3">
+          <a href="/vikash_resume.pdf" download="vikash_resume.pdf">
+            <button style={{
+              backgroundColor: 'greenyellow',
+              border: 'none',
+              color: 'black',
+              padding: '10px 20px',
+              fontSize: '18px',
+              fontWeight: 'bold',
+              borderRadius: '5px',
+              cursor: 'pointer'
+            }}>
+              Download CV
+            </button>
+          </a>
+
+          <div className="d-flex align-items-center gap-3">
+            <a href="https://github.com/viovikash123" target="_blank" rel="noopener noreferrer">
+              <span data-aos="fade-up" data-aos-duration="2500" style={{ color: 'greenyellow', fontSize: '24px' }}>
+                <FaGithub />
+              </span>
+            </a>
+            <a href="https://www.linkedin.com/in/viovikash123/" target="_blank" rel="noopener noreferrer">
+              <span data-aos="fade-up" data-aos-duration="2500" style={{ color: 'greenyellow', fontSize: '24px' }}>
+                <FaLinkedin />
+              </span>
+            </a>
+            <a href="https://www.facebook.com/your-username" target="_blank" rel="noopener noreferrer">
+              <span data-aos="fade-up" data-aos-duration="2500" style={{ color: 'greenyellow', fontSize: '24px' }}>
+                <FaFacebook />
+              </span>
+            </a>
+            <a href="https://twitter.com/your-username" target="_blank" rel="noopener noreferrer">
+              <span data-aos="fade-up" data-aos-duration="2500" style={{ color: 'greenyellow', fontSize: '24px' }}>
+                <FaTwitter />
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
-    </section>
+
+      {/* Image Section */}
+      <div className="col-12 col-md-4 py-5 d-flex justify-content-center align-items-center order-1 order-md-2">
+        <div className="photo" data-aos="zoom-in" data-aos-duration="1500">
+          <div className="circle-border"></div>
+          <img
+            src={vPic}
+            alt="Vikash Profile"
+            className="circle-image"
+            style={{
+              width: '275px',
+              height: 'auto',
+              borderRadius: '50%',
+              objectFit: 'cover',
+              boxShadow: '0 0 20px 8px rgba(173, 255, 47, 0.8)'
+            }}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     
     <section className="skill-section" id="skill-section" style={{ padding: '100px 0', background: 'linear-gradient(135deg, #5D5C61, #A8A7A7)', color: 'white' }}>
     
@@ -240,116 +282,148 @@ const Home = () => {
         </div>
 
         {/* Tools & Other Skills */}
-        <div className="row">
-          <div className="col-12 text-center">
-            <h3 style={{ fontSize: '28px', fontWeight: '600', color: '#333' }}>Tools & Other Skills</h3>
-            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <div style={{ margin: '20px' }}>
-                <DiGit data-aos="fade-up" data-aos-duration="2500" size={60} color="#F1502F" />
-                <p style={{ fontSize: '16px', color: '#dee2e6' }}>Git</p>
-              </div>
-              <div style={{ margin: '20px' }}>
-                <FaReact data-aos="fade-up" data-aos-duration="2500" size={60} color="#61DBFB" />
-                <p style={{ fontSize: '16px', color: '#dee2e6' }}>React Native</p>
-              </div>
-              
-              
-              {/* Added Tools */}
-              <div style={{ margin: '20px' }}>
-                <FaShareSquare  data-aos="fade-up" data-aos-duration="2500" size={60} color="#F2C200" />
-                <p style={{ fontSize: '16px', color: '#dee2e6' }}>SharePoint</p>
-              </div>
-             
-              
-              <div style={{ margin: '20px' }}>
-                <FaMicrosoft data-aos="fade-up" data-aos-duration="2500" size={60} color="#0078d4" />
-                <p style={{ fontSize: '16px', color: '#dee2e6' }}>Microsoft Power Apps</p>
-              </div>
-              <div style={{ margin: '20px' }}>
-                <FaMicrosoft  data-aos="fade-up" data-aos-duration="2500" size={60} color="0078d4" />
-                <p style={{ fontSize: '16px', color: '#dee2e6' }}>Microsoft Power Automate</p>
-              </div>
-              <div style={{ margin: '20px' }}>
-                <FaMicrosoft data-aos="fade-up" data-aos-duration="2500"  size={60} color="0078d4" />
-                <p style={{ fontSize: '16px', color: '#dee2e6' }}>MS Office</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="row py-5">
+  <div className="col-12 text-center mb-4">
+    <h3 style={{ fontSize: '28px', fontWeight: '600', color: '#333' }}>
+      Tools & Other Skills
+    </h3>
+  </div>
+
+  {/* Skills Icons Grid */}
+  <div className="col-12">
+    <div className="d-flex justify-content-center flex-wrap gap-4">
+      {/* Git */}
+      <div className="text-center" style={{ width: '120px' }}>
+        <DiGit data-aos="fade-up" data-aos-duration="1000" size={60} color="#F1502F" />
+        <p style={{ fontSize: '16px', color: '#dee2e6' }}>Git</p>
+      </div>
+
+      {/* React Native */}
+      <div className="text-center" style={{ width: '120px' }}>
+        <FaReact data-aos="fade-up" data-aos-duration="1000" size={60} color="#61DBFB" />
+        <p style={{ fontSize: '16px', color: '#dee2e6' }}>React Native</p>
+      </div>
+
+      {/* SharePoint */}
+      <div className="text-center" style={{ width: '120px' }}>
+        <FaShareSquare data-aos="fade-up" data-aos-duration="1000" size={60} color="#F2C200" />
+        <p style={{ fontSize: '16px', color: '#dee2e6' }}>SharePoint</p>
+      </div>
+
+      {/* Power Apps */}
+      <div className="text-center" style={{ width: '120px' }}>
+        <FaMicrosoft data-aos="fade-up" data-aos-duration="1000" size={60} color="#0078d4" />
+        <p style={{ fontSize: '16px', color: '#dee2e6' }}>Power Apps</p>
+      </div>
+
+      {/* Power Automate */}
+      <div className="text-center" style={{ width: '120px' }}>
+        <FaMicrosoft data-aos="fade-up" data-aos-duration="1000" size={60} color="#0078d4" />
+        <p style={{ fontSize: '16px', color: '#dee2e6' }}>Power Automate</p>
+      </div>
+
+      {/* MS Office */}
+      <div className="text-center" style={{ width: '120px' }}>
+        <FaMicrosoft data-aos="fade-up" data-aos-duration="1000" size={60} color="#0078d4" />
+        <p style={{ fontSize: '16px', color: '#dee2e6' }}>MS Office</p>
+      </div>
+    </div>
+  </div>
+</div>
+
       </div>
     
     </section>
 
-    <section className="projects-section" id='projects-section' style={sectionStyles}>
-      <div className="container">
-        <div className="text-center mb-5">
-          <h2 style={headerStyles}>My Projects</h2>
-          <p style={subHeaderStyles}>
-            These are some of the projects I’ve worked on. Feel free to explore them.
-          </p>
-        </div>
+    <section
+  className="projects-section py-5"
+  id="projects-section"
+  style={sectionStyles}
+>
+  <div className="container">
+    <div className="text-center mb-5">
+      <h2 style={headerStyles}>My Projects</h2>
+      <p style={subHeaderStyles}>
+        These are some of the projects I’ve worked on. Feel free to explore them.
+      </p>
+    </div>
 
-        {/* Project Cards Grid */}
-        <div className="row">
-          {projectData.map((project, index) => (
-            <div data-aos="fade-up" data-aos-duration="1500"className="col-12 col-md-4 mb-4" key={index}>
-              <div className="card shadow-lg" style={cardStyles}>
-                {/* Project Badge */}
-                {!project.liveUrl && (
-                  <div className="badge bg-warning text-dark" style={badgeStyles}>
-                    In Development
-                  </div>
+    <div className="row">
+      {projectData.map((project, index) => (
+        <div
+          className="col-12 col-md-6 col-lg-4 mb-4"
+          key={index}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div className="card h-100 shadow-lg position-relative" style={cardStyles}>
+            {/* Badge */}
+            {!project.liveUrl && (
+              <span
+                className="badge bg-warning text-dark position-absolute top-0 end-0 m-2"
+                style={badgeStyles}
+              >
+                In Development
+              </span>
+            )}
+
+            {/* Image */}
+            <img
+              src={project.imageUrl}
+              className="card-img-top"
+              alt={`${project.title} screenshot`}
+              style={imageStyles}
+            />
+
+            {/* Body */}
+            <div className="card-body d-flex flex-column justify-content-between">
+              <div>
+                <h5 className="card-title" style={titleStyles}>
+                  {project.title}
+                </h5>
+                <p className="card-text" style={descriptionStyles}>
+                  {project.description}
+                </p>
+              </div>
+
+              {/* Buttons */}
+              <div className="d-flex justify-content-between mt-3">
+                {project.liveUrl ? (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary btn-sm"
+                    style={liveButtonStyles}
+                  >
+                    View Live
+                  </a>
+                ) : (
+                  <span
+                    className="btn btn-warning btn-sm disabled"
+                    style={comingSoonButtonStyles}
+                  >
+                    Launch Soon
+                  </span>
                 )}
-                {/* Card Image */}
-                <img
-                  src={project.imageUrl}
-                  className="card-img-top"
-                  alt={`${project.title} screenshot`}
-                  style={imageStyles}
-                />
-                {/* Card Body */}
-                <div className="card-body">
-                  <h5 className="card-title" style={titleStyles}>
-                    {project.title}
-                  </h5>
-                  <p className="card-text" style={descriptionStyles}>
-                    {project.description}
-                  </p>
-                  <div className="d-flex justify-content-between">
-                    {/* Live URL Button */}
-                    {project.liveUrl ? (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn-primary btn-sm"
-                        style={liveButtonStyles}
-                      >
-                        View Live
-                      </a>
-                    ) : (
-                      <span className="btn btn-warning btn-sm" style={comingSoonButtonStyles}>
-                        Launch Soon
-                      </span>
-                    )}
-                    {/* Code URL Button */}
-                    <a
-                      href={project.codeUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn btn-secondary btn-sm"
-                      style={viewCodeButtonStyles}
-                    >
-                      View Code
-                    </a>
-                  </div>
-                </div>
+                <a
+                  href={project.codeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-secondary btn-sm"
+                  style={viewCodeButtonStyles}
+                >
+                  View Code
+                </a>
               </div>
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
+
     <section className='about-container' id='about-section' style={{backgroundColor:"grey"}}>
       <About />
     </section>
