@@ -17,29 +17,29 @@ const Navbar = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 
-                <Link className="nav-link active text-green" to="hero-section" spy={true} smooth={true} duration={300} offset={-70}>
+                <Link className="nav-link active text-green" to="hero-section" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" spy={true}  smooth={true} duration={300} offset={-70}>
                   Home
                 </Link>
               </li>
               <li className="nav-item">
                 
-                <Link className="nav-link" to="skill-section" spy={true} smooth={true} duration={300} offset={-70}>
+                <Link className="nav-link" to="skill-section" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" spy={true} smooth={true} duration={300} offset={-70}>
                   Skills
                 </Link>
               </li>
               <li className="nav-item">
                 
-                <Link className="nav-link" to="projects-section" spy={true} smooth={true} duration={300} offset={-70}>
+                <Link className="nav-link" to="projects-section" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" spy={true} smooth={true} duration={300} offset={-70}>
                   Projects
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="about-section" spy={true} smooth={true} duration={300} offset={-70}>
+                <Link className="nav-link" to="about-section" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" spy={true} smooth={true} duration={300} offset={-70}>
                   About Me
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="contact-section" spy={true} smooth={true} duration={300} offset={-70}>
+                <Link className="nav-link" to="contact-section" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" spy={true} smooth={true} duration={300} offset={-70}>
                   Contact
                 </Link>
               </li>
